@@ -4,5 +4,5 @@ require 'bad_job.php';
 require 'job.php';
 require 'php_error_job.php';
 
-require '../resque.php';
+require dirname(__FILE__).'/../resque.php';
 ?>
