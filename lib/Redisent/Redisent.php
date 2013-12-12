@@ -71,6 +71,7 @@ class Redisent {
         /* Build the Redis unified protocol command */
         array_unshift($args, strtoupper($name));
         $command = sprintf('*%d%s%s%s', count($args), CRLF, implode(array_map(array($this, 'formatArgument'), $args), CRLF), CRLF);
+        // var_dump($command);
 
         /* Open a Redis connection and execute the command */
         for ($written = 0; $written < strlen($command); $written += $fwrite) {
@@ -82,6 +83,7 @@ class Redisent {
 
         /* Parse the response based on the reply identifier */
         $reply = trim(fgets($this->__sock, 512));
+        // var_dump($reply);
         switch (substr($reply, 0, 1)) {
             /* Error reply */
             case '-':
