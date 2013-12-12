@@ -3,10 +3,11 @@ if(empty($argv[1])) {
 	die('Specify the name of a job to add. e.g, php queue.php PHP_Job');
 }
 
-require '../lib/Resque.php';
+require dirname(__FILE__).'/../lib/Resque.php';
 date_default_timezone_set('GMT');
 Resque::setBackend('127.0.0.1:6379');
 
+// 参数必须是个数组
 $args = array(
 	'time' => time(),
 	'array' => array(
