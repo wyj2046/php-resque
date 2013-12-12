@@ -1,5 +1,5 @@
 <?php
-date_default_timezone_set('GMT');
+date_default_timezone_set('Asia/Chongqing');
 require 'bad_job.php';
 require 'job.php';
 require 'php_error_job.php';

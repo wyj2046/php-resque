@@ -4,7 +4,7 @@ if(empty($argv[1])) {
 }
 
 require dirname(__FILE__).'/../lib/Resque.php';
-date_default_timezone_set('GMT');
+date_default_timezone_set('Asia/Chongqing');
 Resque::setBackend('127.0.0.1:6379');
 
 // 参数必须是个数组

@@ -5,7 +5,7 @@ if(empty($argv[1])) {
 
 require dirname(__FILE__).'/../lib/Resque/Job/Status.php';
 require dirname(__FILE__).'/../lib/Resque.php';
-date_default_timezone_set('GMT');
+date_default_timezone_set('Asia/Chongqing');
 Resque::setBackend('127.0.0.1:6379');
 
 $status = new Resque_Job_Status($argv[1]);
