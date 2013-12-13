@@ -104,10 +104,8 @@ class Resque_Redis extends Redisent
 	public function __call($name, $args) {
 		$args = func_get_args();
 		if(in_array($name, $this->keyCommands)) {
-            // 不要命名空间前缀了
-		    /* $args[1][0] = self::$defaultNamespace . $args[1][0]; */
+		    $args[1][0] = self::$defaultNamespace . $args[1][0];
 		}
-        // var_dump($args);
 		try {
 			return parent::__call($name, $args[1]);
 		}
