@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites>
+  <testsuite name="Resque Test Suite" tests="51" assertions="78" failures="0" errors="0" time="3.818304">
+    <testsuite name="Resque_Tests_EventTest" file="/home/rapid/open_source/php-resque/test/Resque/Tests/EventTest.php" fullPackage="Resque" package="Resque" tests="7" assertions="15" failures="0" errors="0" time="0.211525">
+      <testsuite name="Resque_Tests_EventTest::testEventCallbacksFire" tests="3" assertions="6" failures="0" errors="0" time="0.099426">
+        <testcase name="testEventCallbacksFire with data set #0" assertions="2" time="0.043202"/>
+        <testcase name="testEventCallbacksFire with data set #1" assertions="2" time="0.026394"/>
+        <testcase name="testEventCallbacksFire with data set #2" assertions="2" time="0.029830"/>
+      </testsuite>
+      <testcase name="testBeforeForkEventCallbackFires" class="Resque_Tests_EventTest" file="/home/rapid/open_source/php-resque/test/Resque/Tests/EventTest.php" line="66" assertions="2" time="0.058283"/>
+      <testcase name="testBeforePerformEventCanStopWork" class="Resque_Tests_EventTest" file="/home/rapid/open_source/php-resque/test/Resque/Tests/EventTest.php" line="80" assertions="3" time="0.003451"/>
+      <testcase name="testAfterEnqueueEventCallbackFires" class="Resque_Tests_EventTest" file="/home/rapid/open_source/php-resque/test/Resque/Tests/EventTest.php" line="92" assertions="3" time="0.004566"/>
+      <testcase name="testStopListeningRemovesListener" class="Resque_Tests_EventTest" file="/home/rapid/open_source/php-resque/test/Resque/Tests/EventTest.php" line="104" assertions="1" time="0.045799"/>
+    </testsuite>
+    <testsuite name="Resque_Tests_JobStatusTest" file="/home/rapid/open_source/php-resque/test/Resque/Tests/JobStatusTest.php" fullPackage="Resque" package="Resque" tests="9" assertions="11" failures="0" errors="0" time="1.570422">
+      <testcase name="testJobStatusCanBeTracked" class="Resque_Tests_JobStatusTest" file="/home/rapid/open_source/php-resque/test/Resque/Tests/JobStatusTest.php" line="21" assertions="1" time="0.067551"/>
+      <testcase name="testJobStatusIsReturnedViaJobInstance" class="Resque_Tests_JobStatusTest" file="/home/rapid/open_source/php-resque/test/Resque/Tests/JobStatusTest.php" line="28" assertions="1" time="0.054319"/>
+      <testcase name="testQueuedJobReturnsQueuedStatus" class="Resque_Tests_JobStatusTest" file="/home/rapid/open_source/php-resque/test/Resque/Tests/JobStatusTest.php" line="35" assertions="1" time="0.077284"/>
+      <testcase name="testRunningJobReturnsRunningStatus" class="Resque_Tests_JobStatusTest" file="/home/rapid/open_source/php-resque/test/Resque/Tests/JobStatusTest.php" line="41" assertions="1" time="0.065516"/>
+      <testcase name="testFailedJobReturnsFailedStatus" class="Resque_Tests_JobStatusTest" file="/home/rapid/open_source/php-resque/test/Resque/Tests/JobStatusTest.php" line="50" assertions="1" time="0.112536"/>
+      <testcase name="testCompletedJobReturnsCompletedStatus" class="Resque_Tests_JobStatusTest" file="/home/rapid/open_source/php-resque/test/Resque/Tests/JobStatusTest.php" line="58" assertions="1" time="0.998094"/>
+      <testcase name="testStatusIsNotTrackedWhenToldNotTo" class="Resque_Tests_JobStatusTest" file="/home/rapid/open_source/php-resque/test/Resque/Tests/JobStatusTest.php" line="66" assertions="1" time="0.064031"/>
+      <testcase name="testStatusTrackingCanBeStopped" class="Resque_Tests_JobStatusTest" file="/home/rapid/open_source/php-resque/test/Resque/Tests/JobStatusTest.php" line="73" assertions="2" time="0.057628"/>
+      <testcase name="testRecreatedJobWithTrackingStillTracksStatus" class="Resque_Tests_JobStatusTest" file="/home/rapid/open_source/php-resque/test/Resque/Tests/JobStatusTest.php" line="82" assertions="2" time="0.073463"/>
+    </testsuite>
+    <testsuite name="Resque_Tests_JobTest" file="/home/rapid/open_source/php-resque/test/Resque/Tests/JobTest.php" fullPackage="Resque" package="Resque" tests="12" assertions="17" failures="0" errors="0" time="0.595961">
+      <testcase name="testJobCanBeQueued" class="Resque_Tests_JobTest" file="/home/rapid/open_source/php-resque/test/Resque/Tests/JobTest.php" line="24" assertions="1" time="0.054428"/>
+      <testcase name="testQeueuedJobCanBeReserved" class="Resque_Tests_JobTest" file="/home/rapid/open_source/php-resque/test/Resque/Tests/JobTest.php" line="29" assertions="2" time="0.053179"/>
+      <testcase name="testObjectArgumentsCannotBePassedToJob" class="Resque_Tests_JobTest" file="/home/rapid/open_source/php-resque/test/Resque/Tests/JobTest.php" line="44" assertions="1" time="0.049251"/>
+      <testcase name="testQueuedJobReturnsExactSamePassedInArguments" class="Resque_Tests_JobTest" file="/home/rapid/open_source/php-resque/test/Resque/Tests/JobTest.php" line="51" assertions="1" time="0.055018"/>
+      <testcase name="testAfterJobIsReservedItIsRemoved" class="Resque_Tests_JobTest" file="/home/rapid/open_source/php-resque/test/Resque/Tests/JobTest.php" line="70" assertions="1" time="0.047646"/>
+      <testcase name="testRecreatedJobMatchesExistingJob" class="Resque_Tests_JobTest" file="/home/rapid/open_source/php-resque/test/Resque/Tests/JobTest.php" line="77" assertions="2" time="0.058667"/>
+      <testcase name="testFailedJobExceptionsAreCaught" class="Resque_Tests_JobTest" file="/home/rapid/open_source/php-resque/test/Resque/Tests/JobTest.php" line="103" assertions="2" time="0.036256"/>
+      <testcase name="testJobWithoutPerformMethodThrowsException" class="Resque_Tests_JobTest" file="/home/rapid/open_source/php-resque/test/Resque/Tests/JobTest.php" line="121" assertions="1" time="0.053444"/>
+      <testcase name="testInvalidJobThrowsException" class="Resque_Tests_JobTest" file="/home/rapid/open_source/php-resque/test/Resque/Tests/JobTest.php" line="132" assertions="1" time="0.055898"/>
+      <testcase name="testJobWithSetUpCallbackFiresSetUp" class="Resque_Tests_JobTest" file="/home/rapid/open_source/php-resque/test/Resque/Tests/JobTest.php" line="140" assertions="1" time="0.035384"/>
+      <testcase name="testJobWithTearDownCallbackFiresTearDown" class="Resque_Tests_JobTest" file="/home/rapid/open_source/php-resque/test/Resque/Tests/JobTest.php" line="155" assertions="1" time="0.043561"/>
+      <testcase name="testJobWithNamespace" class="Resque_Tests_JobTest" file="/home/rapid/open_source/php-resque/test/Resque/Tests/JobTest.php" line="170" assertions="3" time="0.053229"/>
+    </testsuite>
+    <testsuite name="Resque_Tests_StatTest" file="/home/rapid/open_source/php-resque/test/Resque/Tests/StatTest.php" fullPackage="Resque" package="Resque" tests="6" assertions="6" failures="0" errors="0" time="0.288241">
+      <testcase name="testStatCanBeIncremented" class="Resque_Tests_StatTest" file="/home/rapid/open_source/php-resque/test/Resque/Tests/StatTest.php" line="13" assertions="1" time="0.044883"/>
+      <testcase name="testStatCanBeIncrementedByX" class="Resque_Tests_StatTest" file="/home/rapid/open_source/php-resque/test/Resque/Tests/StatTest.php" line="20" assertions="1" time="0.043689"/>
+      <testcase name="testStatCanBeDecremented" class="Resque_Tests_StatTest" file="/home/rapid/open_source/php-resque/test/Resque/Tests/StatTest.php" line="27" assertions="1" time="0.052371"/>
+      <testcase name="testStatCanBeDecrementedByX" class="Resque_Tests_StatTest" file="/home/rapid/open_source/php-resque/test/Resque/Tests/StatTest.php" line="34" assertions="1" time="0.054589"/>
+      <testcase name="testGetStatByName" class="Resque_Tests_StatTest" file="/home/rapid/open_source/php-resque/test/Resque/Tests/StatTest.php" line="41" assertions="1" time="0.049132"/>
+      <testcase name="testGetUnknownStatReturns0" class="Resque_Tests_StatTest" file="/home/rapid/open_source/php-resque/test/Resque/Tests/StatTest.php" line="47" assertions="1" time="0.043577"/>
+    </testsuite>
+    <testsuite name="Resque_Tests_WorkerTest" file="/home/rapid/open_source/php-resque/test/Resque/Tests/WorkerTest.php" fullPackage="Resque" package="Resque" tests="17" assertions="29" failures="0" errors="0" time="1.152154">
+      <testcase name="testWorkerRegistersInList" class="Resque_Tests_WorkerTest" file="/home/rapid/open_source/php-resque/test/Resque/Tests/WorkerTest.php" line="13" assertions="1" time="0.045812"/>
+      <testcase name="testGetAllWorkers" class="Resque_Tests_WorkerTest" file="/home/rapid/open_source/php-resque/test/Resque/Tests/WorkerTest.php" line="22" assertions="1" time="0.056984"/>
+      <testcase name="testGetWorkerById" class="Resque_Tests_WorkerTest" file="/home/rapid/open_source/php-resque/test/Resque/Tests/WorkerTest.php" line="35" assertions="1" time="0.048170"/>
+      <testcase name="testInvalidWorkerDoesNotExist" class="Resque_Tests_WorkerTest" file="/home/rapid/open_source/php-resque/test/Resque/Tests/WorkerTest.php" line="44" assertions="1" time="0.041869"/>
+      <testcase name="testWorkerCanUnregister" class="Resque_Tests_WorkerTest" file="/home/rapid/open_source/php-resque/test/Resque/Tests/WorkerTest.php" line="49" assertions="3" time="0.047669"/>
+      <testcase name="testPausedWorkerDoesNotPickUpJobs" class="Resque_Tests_WorkerTest" file="/home/rapid/open_source/php-resque/test/Resque/Tests/WorkerTest.php" line="60" assertions="1" time="0.080412"/>
+      <testcase name="testResumedWorkerPicksUpJobs" class="Resque_Tests_WorkerTest" file="/home/rapid/open_source/php-resque/test/Resque/Tests/WorkerTest.php" line="70" assertions="2" time="0.101798"/>
+      <testcase name="testWorkerCanWorkOverMultipleQueues" class="Resque_Tests_WorkerTest" file="/home/rapid/open_source/php-resque/test/Resque/Tests/WorkerTest.php" line="82" assertions="2" time="0.063907"/>
+      <testcase name="testWorkerWorksQueuesInSpecifiedOrder" class="Resque_Tests_WorkerTest" file="/home/rapid/open_source/php-resque/test/Resque/Tests/WorkerTest.php" line="99" assertions="3" time="0.070190"/>
+      <testcase name="testWildcardQueueWorkerWorksAllQueues" class="Resque_Tests_WorkerTest" file="/home/rapid/open_source/php-resque/test/Resque/Tests/WorkerTest.php" line="124" assertions="2" time="0.073627"/>
+      <testcase name="testWorkerDoesNotWorkOnUnknownQueues" class="Resque_Tests_WorkerTest" file="/home/rapid/open_source/php-resque/test/Resque/Tests/WorkerTest.php" line="139" assertions="1" time="0.049344"/>
+      <testcase name="testWorkerClearsItsStatusWhenNotWorking" class="Resque_Tests_WorkerTest" file="/home/rapid/open_source/php-resque/test/Resque/Tests/WorkerTest.php" line="148" assertions="1" time="0.059508"/>
+      <testcase name="testWorkerRecordsWhatItIsWorkingOn" class="Resque_Tests_WorkerTest" file="/home/rapid/open_source/php-resque/test/Resque/Tests/WorkerTest.php" line="158" assertions="2" time="0.054037"/>
+      <testcase name="testWorkerErasesItsStatsWhenShutdown" class="Resque_Tests_WorkerTest" file="/home/rapid/open_source/php-resque/test/Resque/Tests/WorkerTest.php" line="177" assertions="2" time="0.166623"/>
+      <testcase name="testWorkerCleansUpDeadWorkersOnStartup" class="Resque_Tests_WorkerTest" file="/home/rapid/open_source/php-resque/test/Resque/Tests/WorkerTest.php" line="190" assertions="2" time="0.090015"/>
+      <testcase name="testDeadWorkerCleanUpDoesNotCleanUnknownWorkers" class="Resque_Tests_WorkerTest" file="/home/rapid/open_source/php-resque/test/Resque/Tests/WorkerTest.php" line="214" assertions="3" time="0.058920"/>
+      <testcase name="testWorkerFailsUncompletedJobsOnExit" class="Resque_Tests_WorkerTest" file="/home/rapid/open_source/php-resque/test/Resque/Tests/WorkerTest.php" line="237" assertions="1" time="0.043269"/>
+    </testsuite>
+  </testsuite>
+</testsuites>
